@@ -90,6 +90,11 @@ const play = () => {
     }
     actualiseCoeurs(vies);
 
+    rejouerBtn.addEventListener('click', () => {
+        message.style.display = 'none';
+        document.location.reload(true);
+    })
+
 
 }
 
