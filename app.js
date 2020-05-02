@@ -40,6 +40,7 @@ const play = () => {
             body.style.backgroundImage = bgWin;
             message.textContent = `BRAVO !!! Le nombre était bien ${randomNumber}`;
             rejouerBtn.style.display = "block";
+            essayerBtn.setAttribute("disabled", "");
         }
 
         if (valeurInput !== randomNumber) {
