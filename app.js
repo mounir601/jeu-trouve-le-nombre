@@ -43,7 +43,21 @@ const play = () => {
         }
 
         if (valeurInput !== randomNumber) {
-
+            if (randomNumber < valeurInput + 3 && randomNumber > valeurInput - 3) {
+                body.style.backgroundImage = bgBrulant;
+                message.textContent = "C'est Brûlant !!! 🔥🔥🔥 ";
+            } else if (randomNumber < valeurInput + 6 && randomNumber > valeurInput - 6) {
+                body.style.backgroundImage = bgChaud;
+                message.textContent = "C'est Chaud ! 🔥 ";
+            } else if (randomNumber < valeurInput + 11 && randomNumber > valeurInput - 11) {
+                body.style.backgroundImage = bgTiede;
+                message.textContent = "C'est Tiède 😐 ";
+            } else {
+                body.style.backgroundImage = bgFroid;
+                message.textContent = "C'est Froid ❄️ ";
+            }
+            vies--;
+            verifyLoose();
         }
 
 
@@ -51,6 +65,14 @@ const play = () => {
 
     })
 
-
+    const verifyLoose = () => {
+        if (vies === 0) {
+            body.style.backgroundImage = bgLoose;
+            body.style.color = '#990000';
+            essayerBtn.setAttribute("disabled", "");
+            message.textContent = `Vous avez perdu. La réponse était ${randomNumber}`;
+            rejouerBtn.style.display = "block";
+        }
+    }
 
 }
