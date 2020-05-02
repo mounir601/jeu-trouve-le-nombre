@@ -60,7 +60,7 @@ const play = () => {
             verifyLoose();
         }
 
-
+        actualiseCoeurs(vies);
 
 
     })
@@ -75,4 +75,22 @@ const play = () => {
         }
     }
 
+    const actualiseCoeurs = (vies) => {  // total : 6; vies : 4
+        divVies.innerHTML = "";
+        let tableauDeVies = [];
+        for (let i = 0; i < vies; i++) {
+            tableauDeVies.push(coeurPlein);
+        }
+        for (let i = 0; i < totalVies - vies; i++) {
+            tableauDeVies.push(coeurVide);
+        }
+        tableauDeVies.forEach(coeur => {
+            divVies.innerHTML += coeur;
+        })
+    }
+    actualiseCoeurs(vies);
+
+
 }
+
+play();
