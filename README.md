@@ -6,6 +6,6 @@ Les vidéos sont disponibles sur ma chaine Youtube juste ici : https://www.youtu
 Pour trouver le code qui correspond à chaque vidéo, changer la branche pour celle qui porte le nom de la vidéo.
 
 Le projet final est visualisable ici : https://codepen.io/wikode/pen/rNOYaPE
-(Attention, le code HTML n'est pas complet sur CodePen, de sorte à respecter leur exigences)
+(Attention, le code HTML n'est pas complet sur CodePen, de sorte à respecter règles de notation - uniquement le contenu du body est noté)
 
 Bon coding ;)
